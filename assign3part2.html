@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<!-- Assignment 3 Part 2 -->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Assignment 3 Part 2</title>
+        <meta name="description" content="Assignment 3 Part 2.">
+        <!-- <link rel="stylesheet" href="main.css"> -->
+    </head>
+    <body>
+       
+<script>
+    
+//COMM644   Assignment 3, Part 2 
+// TESTED   
+//The Rock, Paper, Scissors Game (10 points)
+//Rock, paper, scissors is a classic 2 player game. Each player chooses rock, paper or scissors. The 
+//possible outcomes include:
+//
+//	Rock destroys scissors.
+//	Scissors cut paper.
+//	Paper covers rock.
+//
+//In this lab you will be responsible for figuring out some of the logic. These next steps will attempt to //guide you down the right path: 
+//
+//1.Begin by prompting the user for their choice.
+//2.Create the computer’s choice. This will be generated similarly to the coin flip that you did last week. 
+//  Remember though, rather than 2 options, there will be 3 here.
+//3.Depending on what the numeric value of the computer’s choice is, reset it to a string value of rock, 
+//  paper, or scissors instead.
+//4.Create a conditional that checks the user’s choice in relation to the computer’s choice. Once a winner is //  defined, display a message within an alert box indicating who the winner is.
+//5.What if the result ends in a tie? Figure out how to handle that as well.
+//6.What if the user enters something other than rock, paper, or scissors into the prompt? Figure out how to 
+//  handle that as well.
+
+/*
+var game_done = false;
+do {
+//Our code will break the game into 3 phases:
+
+//Step 1.User makes a choice.
+var user_choice = window.prompt("Enter 'rock', 'paper', or 'scissors':");
+user_choice = user_choice.toLowerCase();
+
+if ((user_choice != 'rock') && (user_choice != 'scissors') && (user_choice != 'paper') )
+{
+    document.write("Try again, you spelled it wrong.<br>");
+    continue;
+}
+    
+//Step 2.Computer makes a choice.
+var computer_choice;                                                                  
+var random_computer_choice = Math.ceil(Math.random() * 3);
+if      (random_computer_choice == 1)  { computer_choice = 'rock'    ; }
+else if (random_computer_choice == 2)  { computer_choice = 'paper'   ; }           
+else                                   { computer_choice = 'scissors'; } //3          
+           
+//Step 3.A conditional that determines who wins.
+if ((computer_choice == 'rock'     && user_choice == 'scissors') ||
+    (computer_choice == 'scissors' && user_choice == 'paper'   ) ||
+    (computer_choice == 'paper'    && user_choice == 'rock'    ) )
+     { 
+         document.write("computer_choice = " + computer_choice + "<br>");
+         document.write("user_choice = "     + user_choice     + "<br>");
+         
+         document.write("You lose, thanks for playing!<br>"); 
+         boolGameDone = true; 
+     }
+else if ((user_choice == 'rock'     && computer_choice == 'scissors') ||
+         (user_choice == 'scissors' && computer_choice == 'paper'   ) ||
+         (user_choice == 'paper'    && computer_choice == 'rock'    ) )
+     {
+        document.write("user_choice = "     + user_choice     + "<br>");
+        document.write("computer_choice = " + computer_choice + "<br>");
+         
+        document.write("You won, thanks for playing!<br>"); 
+        game_done = true;
+     }                                                              
+else {
+        document.write("user_choice = "     + user_choice     + "<br>");
+        document.write("computer_choice = " + computer_choice + "<br>");
+    
+        document.write("Draw, No Winner, Play again!<br>");
+        game_done = false;
+     }          
+} while (!game_done);
+*/    
+    
+/*
+//The Basic Calculator (10 points)
+//In this part of the assignment you will build a simple calculator. You will ask the user for a number, a //second number, and then finally ask them what kind of operation they want to perform, either add, subtract, //multiply, or divide. Depending on what they select, you will perform that operation. To complete this lab //follow the steps outlined here:
+
+//Step 1
+var first_number = window.prompt("Enter a first number:");
+
+//Step 2
+var second_number = window.prompt("Enter a second number:");
+    
+//Step 3
+var good_input = false;
+do { 
+var op = window.prompt("Enter operation: 'add' 'subtract' 'mulitply' or 'divide'");
+//Step 7
+if ((op == 'add') || (op == 'subtract') || (op == 'multiply') || (op == 'divide'  ) )
+{ 
+     good_input = true;     
+} else {
+     window.alert("Re-enter operator selection...");   
+}
+} while (!good_input);
+
+//Step 5
+var result = calculate(first_number, second_number, op);    
+
+//Step 4.Create a new named function called calculate() that accepts 3 parameters.
+function calculate(num1, num2, op){
+    var result;
+    //Step 6
+    switch (op){
+        case 'add':
+            result = (+num1 + +num2); break;
+        case 'subtract':
+            result = (+num1 - +num2); break;
+        case 'multiply':
+            result = (+num1 * +num2); break;
+        case 'divide':
+            result = (+num1 / +num2); break;
+    }
+    window.console.log("Result of calculate is: " + result);
+}
+//Step 5 (above)
+//Step 6 (above)
+//Step 7 (above)
+*/    
+    
+//Death by JavaScript (4 points each for 20 points total)
+//Solve the following function/array-related problems. Each solution should be written within its own function //and the output should be displayed within a console window. The display should be the return value of the //function call.
+
+/*
+//Step 1
+function sortLetters(input){
+    window.console.log("Orig String: " + input); 
+    var arrString = input.split("");
+    arrString.sort();
+    var arrOutput = arrString.join();
+    arrOutput = arrOutput.replace(/,/g,'');
+    window.console.log("Sorted String: " + arrOutput ) ;
+}
+//Sample Data and Output: Example string: 'webmaster'    Expected Output: 'abeemrstw'
+sortLetters("webmaster");
+*/
+
+/*    
+//Step 2
+function change2Caps(input){
+    return input.replace( /(^|\s)([a-z])/g , function(m,p1,p2){ return p1+p2.toUpperCase(); } );
+}   
+//Sample Data and Output
+//Example string: 'the quick brown fox' 
+//Expected Output: 'The Quick Brown Fox'
+var input = "the quick brown fox";
+var output = change2Caps(input);
+window.console.log(output);
+*/
+
+/*
+//Step 3
+function vowelCount(input){
+  var match = input.match(/[aeiou]/gi);
+  return match === null ? 0 : match.length;
+}  
+//Sample Data and Output: Example string: 'The quick brown fox'    Expected Output: 5
+testString = "The quick brown fox";
+var iVowelCount = vowelCount(testString);
+window.console.log("Number of vowels in " + "'" + testString + "'" + " is: " + iVowelCount );
+*/
+    
+/*
+//Step 4
+function generateEightCharPassword()
+{
+    var password = "";
+    var charPool = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+
+    for( var i=0; i < 8; i++ )
+        password += charPool.charAt(Math.floor(Math.random() * charPool.length));
+
+    return password;
+}    
+//Sample Data and Output:   Expected Output: RCv1SBUC or PmJkc2Y2 or nIi5L0FA
+var newPassword = generateEightCharPassword();
+document.write("This is the generated 8 character password: " + newPassword);
+*/ 
+    
+    
+/* FIX THIS CODE...    
+//Step 5.Write a JavaScript function that accepts a list of country names as input and when called, returns
+// the longest country name as the output.
+function longestCountryName(countryList){
+    var sLongestCountryName;
+    //code to test for the longest name...
+    var countryList = countryList.split(",");
+    var intLength = 0;
+    for(var i = 0; i < countryList.length; i++){       
+        if(countryList[i].length > intLength){
+           intLength = countryList[i].length;
+           sLongestCountryName = countryList[i];               
+        } 
+    } 
+    return sLongestCountryName;
+}
+
+//Sample function: Longest_Country_Name(["Australia","Germany","United States of America"])
+//Expected output: "United States of America"
+var countryNameList;
+countryNameList = ["Australia","Germany","United States of America"];
+var sLongestCountryName;
+slongestCountryName = longestCountryName(countryNameList);
+document.write("The longest country name is: " + sLongestCountryName);        
+*/
+
+document.write("<br><br><br><br>End of file...");
+</script> 
+        
+    </body>
+</html>

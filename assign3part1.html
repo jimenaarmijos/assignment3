@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<!-- Assignment 3 Part 1 -->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jimena Assignment 3 Part 1</title>
+        <meta name="description" content="Assignment">
+        <!-- <link rel="stylesheet" href="main.css"> -->
+    </head>
+    <body>
+       
+<script>
+//COMM644
+//Assignment 3, Part 1
+    
+//Practice with Arrays (5 points)
+//Within a new web page, create the following applications. Remember to comment out every application once
+//you’ve finished with that step:
+
+/*   
+//Step 1
+var movies =  ["Cynderella", "Tangled", "The Lion King", "Frozen", "Tarzan"];
+window.console.log("Second movie is: " + arrMovies[1]);
+*/
+    
+/*
+//Step 2  
+var movies =  ["Cynderella", "Tangled", "The Lion King", "Frozen", "Tarzan"];
+window.console.log("First movie is: " + arrMovies2[0]);
+*/
+    
+/*   
+//Step 3
+var movies =  ["Cynderella", "Tangled", "The Lion King", "Frozen", "Tarzan"];    
+arrMovies3.splice(2, 0, "Holiday"); 
+window.console.log("Number of movies is the array is: " + arrMovies3.length);        
+*/ 
+    
+/*    
+//Step 4
+var movies =  ["Cynderella", "Tangled", "The Lion King", "Frozen", "Tarzan"];   
+delete arrMovies4[0];    
+window.console.log("Content of the array is now " + arrMovies4);
+*/
+    
+/*
+//Step 5.
+var movies =  ["Cynderella", "Tangled", "The Lion King", "Frozen", "Tarzan",
+                  "Twiglight",  "Selina"];
+for (var i = 0; i < arrMovies5.length; i++){
+     window.console.log(arrMovies5[i]);
+}  
+*/
+    
+/*    
+//Step 6
+var movies =  ["Cynderella", "Tangled", "The Lion King", "Frozen", "Tarzan",
+                  "Twiglight",  "Selina"];    
+var numMovie;
+for (numMovie in arrMovies6){
+    console.log(arrMovies6[numMovie]);
+}
+*/
+    
+/*
+//Step 7
+var movies =  ["Cynderella", "Tangled", "The Lion King", "Frozen", "Tarzan",
+                  "Twiglight",  "Selina"];
+arrMovies7.sort();    
+var numMovie;
+for (numMovie in arrMovies7){
+    console.log(arrMovies7[numMovie]);
+}
+*/  
+/*         
+//Step 8
+var movies_I_liked = ["Cynderella", "Tangled", "The Lion King", "Frozen"];
+var movies_I_disliked = ["The Shallows","The Counjuring 2","The BFG"];    
+window.console.log("Movies I liked:")
+window.console.log(" ");
+window.console.log(movies_I_liked[0]);
+window.console.log(movies_I_liked[1]);
+window.console.log(movies_I_liked[2]);
+window.console.log(movies_I_liked[3]); 
+window.console.log(" ");
+window.console.log("Movies I regret watching:")
+window.console.log(" ");
+window.console.log(movies_I_disliked[0]);
+window.console.log(movies_I_disliked[1]);
+window.console.log(movies_I_disliked[2]);   
+*/
+    
+/*
+//Step 9
+var movies_I_liked = ["Cynderella", "Tangled", "The Lion King", "Frozen"];
+var movies_I_disliked = ["The Shallows","The Counjuring 2","The BFG"]; 
+var my_list = movies_I_liked.concat(movies_I_disliked);
+var movie_list = movies_I_liked.concat(movies_I_disliked);
+var reverseList = my_list.reverse();
+window.console.log("The reversed array: " + reverseList);   
+
+//
+//Step 10
+var lastItem = reverseList[reverseList.length -1];
+window.console.log("The last item in the array is: " + lastItem);    
+
+//Step 11
+var firstItem = reverseList[0];
+window.console.log("The first item in the array: " + firstItem); 
+
+//Step 12  WORK ON THIS!!!
+// I DO NOT KNOW HOW TO CODE thiS ?
+//12.Programmatically retrieve the movies in your array that you do not like and return their indices. Then, //   using those indices, programmatically add movies that you do like. 
+    
+replacement_movies = ["Tarzan","Twiglight","Batman"];
+var movies_I_disliked = ["The Shallows","The Counjuring 2","The BFG"];
+//movie_list contains movies I liked and movies I disliked.
+
+window.console.log("movie_list before replacement:" + movie_list + "<br>");
+   
+var my_index0, my_index1, my_index2;  
+for (var i = 0; i < movie_list.length; i++){
+    if (movie_list[i] == "The Shallows"){
+       my_index0 = i; 
+    }
+    else if (movie_list[i] == "The Counjuring 2"){
+       my_index1 = i; 
+    }
+    else if (movie_list[i] == "The BFG"){
+       my_index2 = i; 
+    }  
+}
+movie_list[my_index0] = replacement_movies[0];  
+movie_list[my_index1] = replacement_movies[1];
+movie_list[my_index2] = replacement_movies[2];
+window.console.log("movie_list after replacement:" + movie_list + "<br>");
+*/
+    
+/*  
+//Step 13 
+var emp1 = new Array();  
+emp1['id']    = "1001";
+emp1['name']  = "Tim Cook";
+emp1['title'] = "Cook";
+emp1['dept']  = "Food";    
+emp1['employed'] = "true";    
+var emp2 = new Array(); 
+emp2['id']    = "1002";
+emp2['name']  = "Mary Jones";
+emp2['title'] = "Manager";
+emp2['dept']  = "Marketing";    
+emp2['employed'] = "true";     
+var employees = new Array();
+employees[0] = emp1;
+employees[1] = emp2;
+window.console.log("Second Employee's Name: " + employees[1].name);  
+
+//Step 14
+console.log("Both employees names: ");
+for (var i = 0; i < employees.length; i++){
+    console.log(employees[i].name);
+} 
+
+//Step 15
+var emp3 = new Array(); 
+emp3['id']    = "1003";
+emp3['name']  = "Ellen Strong";
+emp3['title'] = "Bookkeeper";
+emp3['dept']  = "Accounting";    
+emp3['employed'] = "false"; 
+employees[2] = emp3;    
+console.log("Employed persons: ");
+for (var i = 0; i < employees.length; i++){
+    if (employees[i].employed == "false") continue;
+    console.log(employees[i].name);
+} 
+*/
+    
+/* 
+//Step 16.Create a multi-dimensional array that contains your 5 favorite movies and their ranking from 1-5. //The //array should look something like this: 
+//movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
+//Now, loop through the array and filter out and display only the movie names. You must use the filter() //method and you’ll need to filter out the names by their primitive data type.
+//
+//Display all names using a primitive filter...
+//
+// DON'T KNOW HOW TO DO THIS!
+//
+
+//two-dimentional arrar of movies...
+var my_movies = ["Cynderella ,1", "Tangled, 2", "The Lion King, 3", "Frozen, 4", "Tarzan, 5"];
+
+//COULD NOT DO THE STEP - Jimena.
+*/   
+
+//Practice with Functions (5 points)
+/* OK
+//Step 1
+var displayMessage = function(output) {
+  window.console.log(output);
+};
+displayMessage("Output from anonymous function.");
+*/
+    
+/* OK
+//Step 2
+function calculate(num1, num2){
+    return num1 % num2;
+}
+result = calculate(27, 8);
+window.console.log(result);
+*/
+/* OK    
+//Step 3
+
+//Employees: 
+
+//ZAK 
+//JESSICA 
+//MARK 
+//FRED 
+//SALLY
+
+var emps = ["Tim", "Mary", "Paul", "Bobby", "Charles"];    
+var showEmployee = function(array){
+    window.console.log("Employees:");
+    window.console.log("");
+    var i;
+    for (i = 0; i < array.length; i++){
+        window.console.log(array[i]);
+    }
+}    
+showEmployee(emps);        
+*/    
+document.write("<br><br><br>End of File.");
+</script> 
+        
+    </body>
+</html>
